@@ -1,0 +1,17 @@
+<section
+	class="charts-container app-regular-padding"
+	[style.width]="width"
+	(window:resize)="onResize($event)">
+	<google-chart
+		style="width: 60%; height: 300px"
+		[type]="marketPriceType"
+		[title]="marketPriceChart.title"
+		[data]="marketData"
+		[options]="marketPriceChart.options"></google-chart>
+	<google-chart
+		style="width: 60%; height: 300px"
+		[type]="ConfirmedTransactionsType"
+		[title]="ConfirmedTransactionsChart.title"
+		[data]="tranData"
+		[options]="ConfirmedTransactionsChart.options"></google-chart>
+</section>

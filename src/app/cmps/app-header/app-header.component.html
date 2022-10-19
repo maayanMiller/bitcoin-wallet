@@ -1,0 +1,46 @@
+<header class="navbar container" [ngClass]="{'navbar-fixed': isFixedNavbar}">
+	<div class="navbar-logo" routerLink="/">
+		<img src="assets/icons/bitcoin.png" alt="" />
+		<h1>Master Bitcoin</h1>
+	</div>
+
+	<button class="navbar-toggle" (click)="toggleNavbar()">
+		<mat-icon>{{ !navbarOpened ? 'menu' : 'close' }}</mat-icon>
+	</button>
+	<div fxFlex class="top-navbar">
+		<span fxFlex></span>
+		<a
+			mat-button
+			(click)="closeMenue()"
+			class="navbartop-btn"
+			routerLink="/"
+			routerLinkActive="active"
+			[routerLinkActiveOptions]="{exact: true}"
+			><strong>Home</strong></a
+		>
+		<a
+			mat-button
+			(click)="closeMenue()"
+			class="navbartop-btn"
+			routerLink="/contacts"
+			routerLinkActive="active"
+			><strong>Contacts</strong></a
+		>
+		<a
+			mat-button
+			(click)="closeMenue()"
+			class="navbartop-btn"
+			routerLink="/statistic"
+			routerLinkActive="active"
+			><strong>Statistic</strong></a
+		>
+		<a
+			mat-button
+			(click)="closeMenue()"
+			class="navbartop-btn"
+			routerLink="/login"
+			routerLinkActive="active"
+			><strong>Log-in</strong></a
+		>
+	</div>
+</header>

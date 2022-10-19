@@ -1,0 +1,38 @@
+:host {
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+}
+
+.main-transfer-container {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 396.033px;
+}
+
+.homepage-title-container {
+  margin-bottom: 20px;
+  align-self: start;
+}
+
+.home-transfer {
+  // *:not(:last-child) {}
+
+  span {
+    color: #f09819;
+  }
+
+  .items {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.home-items-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ffd8a2;
+}

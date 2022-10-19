@@ -1,0 +1,16 @@
+<section class="contact-preview" [routerLink]="['/contacts', contact._id]">
+	<section class="info">
+		<section class="data">
+			<h1>{{ contact.name }}</h1>
+		</section>
+		<img src="assets/icons/contact.png" alt="" />
+	</section>
+	<section class="actions">
+		<div (click)="onEditConatct($event, contact._id)" class="edit-btn">
+			<img src="assets/icons/edit1.png" alt="" />
+		</div>
+		<div (click)="onRemoveContact()" class="edit-btn">
+			<img src="assets/icons/delete1.png" alt="" />
+		</div>
+	</section>
+</section>

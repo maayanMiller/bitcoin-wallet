@@ -1,0 +1,21 @@
+<section class="main-page-container app-regular-padding">
+	<img class="home-icon" src="../../../assets/icons/bitcoin-15509.png" alt="" />
+	<div *ngIf="!(user$ | async) as user">
+		<h2>Bitcoin connections</h2>
+		<h4>The easy way to transfer bitcoin</h4>
+	</div>
+	<div *ngIf="user$ | async as user">
+		<div class="title">
+			<h2>Hello {{ user.name }}!</h2>
+		</div>
+		<span>
+			<img src="assets/icons/coins.png" alt=".." />
+			<p>Coins: {{ user.coins }}</p>
+		</span>
+		<span>
+			<img src="assets/icons/bitcoin.png" alt=".." />
+			<p *ngIf="ans">BTC: {{ ans }}</p>
+		</span>
+	</div>
+</section>
+<move-list *ngIf="user$ | async as user"></move-list>

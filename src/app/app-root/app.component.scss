@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    // min-height: 100vh;
+}
+
+.main-app {
+    width: 100%;
+    height: 100%;
+
+    .btn-choices {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .chosen-cmp {
+        background-color: #f2a900;
+    }
+}

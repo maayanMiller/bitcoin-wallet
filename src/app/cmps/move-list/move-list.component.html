@@ -1,0 +1,29 @@
+<section class="main-transfer-container">
+	<div class="homepage-title-container" *ngIf="!contact && !user.moves.length">
+		<h2>no transfers have been made yet</h2>
+	</div>
+	<section *ngIf="!contact && user.moves.length" class="home-transfer">
+		<h2 class="homepage-title-container">Last Transfers:</h2>
+		<div class="home-items-section" *ngFor="let move of user.moves | slice: 0:3">
+			<p>
+				To: <span>{{ move.to }}</span>
+			</p>
+			<p>
+				Coins Transferred: <span>{{ move.amount }}</span>
+			</p>
+			<p>
+				Transferred at: <span>{{ move.at | date: 'dd.MM.yy HH:mm' }}</span>
+			</p>
+		</div>
+	</section>
+
+	<div *ngIf="contact && !isMovesToContact" class="capitalize notransfers-container">
+		<h2>no transfers have been made to this contact</h2>
+	</div>
+	<div *ngFor="let move of user.moves">
+		<div *ngIf="contact?.name === move.to">
+			<p>{{ move.at | date: 'dd.MM.yy HH:mm' }}</p>
+			<p>coins transferred: {{ move.amount }}</p>
+		</div>
+	</div>
+</section>

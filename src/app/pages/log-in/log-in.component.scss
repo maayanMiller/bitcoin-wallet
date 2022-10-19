@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 73vh;
+}
+
+.main-page-container {
+  .home-icon {
+    width: 350px;
+  }
+
+  .title {
+    margin-bottom: 20px;
+  }
+}

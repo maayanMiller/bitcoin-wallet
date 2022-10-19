@@ -1,0 +1,15 @@
+<section *ngIf="contact" class="details app-regular-padding">
+	<img src="assets/icons/contact.png" alt="" />
+	<section>
+		<p><span>Name:</span> {{ contact.name }}</p>
+		<p><span>Email:</span> {{ contact.email }}</p>
+		<p><span>Phone:</span> {{ contact.phone }}</p>
+	</section>
+	<section class="actions">
+		<button class="main-btn" (click)="onEdit()">Edit</button>
+		<button class="main-btn" (click)="removeContact()">Delete</button>
+		<button class="main-btn" (click)="onGoBack()">Back</button>
+	</section>
+</section>
+<transfer-fund [contact]="contact"></transfer-fund>
+<move-list [contact]="contact"></move-list>

@@ -1,0 +1,18 @@
+.contact-filter {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+        height: fit-content;
+        font-size: 16px;
+    }
+
+    button {
+        width: 4em;
+        height: 4em;
+        background: none;
+        border: none;
+    }
+}

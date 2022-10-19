@@ -1,0 +1,13 @@
+:host {
+    height: 80Vh;
+
+}
+
+.charts-container {
+    display: flex;
+    border-radius: 5px;
+    padding: 25px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

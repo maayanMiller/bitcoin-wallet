@@ -1,0 +1,46 @@
+<section class="wrapper" [style.top]="top">
+	<form *ngIf="contact" class="contact-edit" #form="ngForm" (ngSubmit)="onSaveContact(form)">
+		<h1>{{ title }}</h1>
+
+		<div class="inputs">
+			<span>
+				<input
+					name="name"
+					[(ngModel)]="contact.name"
+					placeholder="First name"
+					type="text"
+					required />
+			</span>
+			<span>
+				<input
+					name="email"
+					[(ngModel)]="contact.email"
+					placeholder="Your Email"
+					type="email"
+					required />
+			</span>
+			<span>
+				<input
+					name="phone"
+					[(ngModel)]="contact.phone"
+					placeholder="Your Phone Number"
+					type="tel"
+					required />
+			</span>
+		</div>
+
+		<div class="btns">
+			<button
+				class="main-btn"
+				[disabled]="form.invalid"
+				md-button
+				color="primary"
+				type="submit">
+				SUBMIT
+			</button>
+			<button class="main-btn" md-button color="primary" (click)="onCancel($event)">
+				CANCEL
+			</button>
+		</div>
+	</form>
+</section>

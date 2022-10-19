@@ -1,0 +1,16 @@
+<section class="trans-fund">
+	<p>Transfer To : {{ contact.name }}</p>
+	<p>{{ amount }} : coins</p>
+	<label>
+		Amount:
+		<input
+			[title]="amount"
+			type="range"
+			id="amount"
+			name="amount"
+			min="0"
+			[max]="user.coins"
+			[(ngModel)]="amount" />
+		<button (click)="transfer()">transfer</button>
+	</label>
+</section>
